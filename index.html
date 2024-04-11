@@ -3,66 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Alternativas</title>
+    <title>Tela Inicial</title>
     <style>
         body {
-            background-color: #f2f2f2; /* Fundo cinza */
             font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-        h1, p {
             text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .question {
+
+        h1 {
+            color: #333333;
             margin-bottom: 20px;
         }
-        .options {
-            list-style-type: none;
-            padding: 0;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        .options li {
+
+        .game {
+            margin: 0 10px;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .game:hover {
+            transform: scale(1.1);
+        }
+
+        .game h2 {
             margin-bottom: 10px;
         }
-        .options input[type="radio"] {
-            margin-right: 10px;
-        }
-        input[type="submit"] {
-            display: block;
-            margin: 0 auto;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
+
+        .game p {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
+    <h1>Escolha um Jogo</h1>
     <div class="container">
-        <h1>Quiz de Bullying Geral</h1>
-        <h1>Feito por: Ivan, Leandro, Matheus, Rafael, João. </h1>
-        <h1>Escola: C. E Admardo Alves Torres. </h1>
-        <h1>Professora: Patrícia</h1>
-       
-        <div class="question" id="question">
-            <!-- A pergunta e opções serão carregadas aqui -->
+        <div class="game" onclick="location.href='bullying-digital-main/index.html';">
+            <h2>Quiz de bullying</h2>
+            <p>Teste seus conhecimentos e ajude a combater esse problema sério.</p>
+            <button>Iniciar Quiz de bullying</button>
         </div>
-        <input type="submit" id="submitBtn" value="Enviar Resposta">
-        <div id="result"></div> <!-- Este é o elemento para exibir o resultado -->
+        <div class="game" onclick="location.href='s/index.html';">
+            <h2>Adivinha a Palavra</h2>
+            <p>Desafie-se com o jogo Adivinha a Palavra!</p>
+            <button>Iniciar Adivinha a Palavra</button>
+        </div>
     </div>
-
-    <script src="script.js"></script> <!-- Vincula o arquivo JavaScript -->
 </body>
 </html>
