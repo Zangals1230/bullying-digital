@@ -28,11 +28,10 @@ function mostrarPalavraAtual() {
     document.getElementById("palavraAtual").textContent = palavraAtual.palavra;
     document.getElementById("dica").textContent = "Dica: " + palavraAtual.dica;
 }
-
 function checkGuess() {
-    var palpite = document.getElementById("guessInput").value.toLowerCase();
+    var palpite = document.getElementById("guessInput").value.toLowerCase().trim(); // Converte para minúsculas e remove espaços em branco do início e do fim
 
-    if (palpite === palavraAtual.palavra) {
+    if (palpite === palavraAtual.palavra.toLowerCase()) { // Converte a palavra atual para minúsculas para comparar
         acertos++;
         proximaPalavra();
     } else {
