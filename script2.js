@@ -16,193 +16,159 @@ questionDiv.appendChild(difficultySelector);
 let playerName = '';
 let playerData = JSON.parse(localStorage.getItem('playerData')) || [];
 let currentDifficulty = '';
-
 const questions = [
     {
-        question: "Como podemos ajudar alguém que está sofrendo bullying?",
+        question: "O que é considerado violência escolar?",
         options: [
-           "Ignorar o problema e esperar que desapareça.",
-            "Participar do bullying para não se tornar alvo.",
-            "Rir da vítima para não ser alvo do bullying.",
-            "Conversar com a vítima e oferecer apoio emocional.",
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "Quais são as causas do bullying?",
-        options: [
-            "Diversos fatores, incluindo problemas familiares, sociais e psicológicos.",
-            "Apenas diferenças físicas entre as pessoas.",
-            "Falta de punição para os agressores.",
-            "Pressão dos amigos para praticar bullying."
-        ],
-        correct_answer: "a"
-    },
-    {
-        question: "Quais são os principais tipos de bullying?",
-        options: [
-            "Verbal, físico, psicológico e cyberbullying.",
-            "Agressão, indiferença, conformismo e exclusão.",
-            "Competição, discriminação, preconceito e abuso de poder.",
-            "Provocação, negação, minimização e justificação."
-        ],
-        correct_answer: "a"
-    },
-    {
-        question: "Quais são os efeitos do bullying na vítima?",
-        options: [
-             "Forte resistência psicológica e emocional.",
-            "Melhoria na autoimagem e confiança.",
-            "Desenvolvimento saudável de habilidades sociais.",
-            "Baixa autoestima, depressão, ansiedade e até mesmo pensamentos suicidas.",
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "Como prevenir o bullying?",
-        options: [
-           "Ignorando o problema e esperando que desapareça por si só.",
-           "Promovendo a conscientização e ensinando habilidades sociais desde cedo.",
-            "Punindo severamente as vítimas do bullying.",
-            "Isolando os agressores do convívio social."
+            "Apenas agressão física entre alunos.",
+            "Qualquer comportamento que cause dano físico, psicológico ou emocional dentro do ambiente escolar.",
+            "Somente brigas entre professores e alunos.",
+            "Somente quando há uso de armas."
         ],
         correct_answer: "b"
     },
     {
-        question: "O que motivou a autora a escrever o livro 'A face oculta?'",
+        question: "Quais são os principais tipos de violência nas escolas?",
         options: [
-              "Ela queria ganhar dinheiro.",
-            "Ela estava entediada e decidiu escrever um livro.",
-            "Ela quis se vingar de alguém.",
-            "Ela ouviu centenas de histórias de pessoas que sofrem bullying e cyberbullying de quem pratica e de quem participa dessas ações.",    
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "Qual o objetivo do livro 'A face oculta?'",
-        options: [
-            "Promover o bullying.",
-            "Incentivar o cyberbullying.",
-            "Ajudar quem sofre bullying.",    
-            "Divulgar os agressores."
-        ],
-        correct_answer: "c"
-    },
-    {
-        question: "Quem é a Luciana, do livro 'A face oculta?'",
-        options: [
-              "A autora do livro.",
-            "A melhor amiga da autora.",
-            "A professora da escola.",
-            "Uma vítima do Cyberbullying.",
-       
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "Por que Luciana não pediu ajuda para algum adulto após sofrer cyberbullying?",
-        options: [
-            "Porque ela teme ficar sem o seu precioso computador.",
-            "Porque ela acha que não é um grande problema.",
-            "Porque ela não gosta de adultos.",
-            "Porque ela não tem amigos."
-        ],
-        correct_answer: "a"
-    },
-    {
-        question: "Por que o escritor sofreu bullying quando era criança?",
-        options: [
-            "Porque ele era muito popular.",
-            "Porque ele era muito rico.",
-            "Porque ele era diferente das outras crianças.",
-            "Não existe motivo para sofrer bullying."
-         
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "O bullying é considerado uma brincadeira?",
-        options: [
-             "Sim, sempre.",
-            "Depende do contexto.",
-            "Às vezes.",
-            "Não.",
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "Qual é a definição de bullying?",
-        options: [
-            "Bullying é um comportamento agressivo e repetitivo que tem o objetivo de intimidar, ameaçar ou humilhar alguém.",
-            "Bullying é uma forma de entretenimento.",
-            "Bullying é uma prática aceitável na sociedade.",
-            "Bullying é uma expressão de amor."
-        ],
-        correct_answer: "a"
-    },
-    {
-        question: "Como identificar se alguém está sofrendo bullying?",
-        options: [
-            "Não é possível identificar se alguém está sofrendo bullying.",
-            "Apenas perguntando diretamente à pessoa.",
-            "Observando se a pessoa está sempre rodeada de amigos.",
-            "Alguns sinais de que alguém está sofrendo bullying incluem mudanças de comportamento, isolamento, evitação de certos lugares ou pessoas, entre outros.",
-         
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "Como ajudar alguém que está sofrendo bullying?",
-        options: [
-           "Ignorar a situação e esperar que ela se resolva sozinha.",
-           "É importante ouvir a pessoa, oferecer apoio e encorajá-la a procurar ajuda de um adulto de sua confiança, como um professor ou os pais.",       
-            "Participar do bullying para se sentir incluído.",
-            "Rir da vítima para evitar ser alvo."
+            "Apenas física e verbal.",
+            "Física, verbal, psicológica e cyberbullying.",
+            "Somente agressão física e vandalismo.",
+            "Apenas quando há violência entre alunos e professores."
         ],
         correct_answer: "b"
     },
-    // Novas perguntas adicionadas:
     {
-        question: "Qual é uma das formas de bullying?",
-        options: [      
-            "Elogio",
-            "Complimento",
-            "Apoio",
-            "Verbal",
+        question: "Qual das opções abaixo é um exemplo de violência psicológica na escola?",
+        options: [
+            "Empurrar um colega no corredor.",
+            "Exclusão social e humilhação repetitiva.",
+            "Fazer uma denúncia sobre um caso de agressão.",
+            "Ajudar um colega a estudar para uma prova."
         ],
-        correct_answer: "d"
+        correct_answer: "b"
     },
     {
-        question: "O que significa cyberbullying?",
+        question: "Quais são as consequências da violência escolar para as vítimas?",
         options: [
-             "Bullying realizado na rua.",
-            "Bullying realizado na escola.",
-            "Bullying realizado através de meios eletrônicos, como a internet e o celular.",          
-            "Bullying realizado por professores."
+            "Melhoria na autoestima e desempenho escolar.",
+            "Apenas lesões físicas leves.",
+            "Ansiedade, depressão, dificuldades de aprendizado e até evasão escolar.",
+            "Nenhuma consequência significativa."
         ],
         correct_answer: "c"
     },
     {
-        question: "Por que é importante prevenir o bullying?",
+        question: "O que pode levar um estudante a praticar violência na escola?",
         options: [
-            "Porque é uma forma de entretenimento.",
-            "Porque é uma prática aceitável na sociedade.",
-            "Porque demonstra amor e preocupação.",
-            "Porque pode causar sérios danos emocionais e psicológicos às vítimas."
-        ],
-        correct_answer: "d"
-    },
-    {
-        question: "Como você acha que podemos criar um ambiente escolar mais seguro e livre de bullying?",
-        options: [
-            "Promovendo a inclusão e o respeito mútuo entre os alunos.",
-            "Ignorando os casos de bullying e esperando que desapareçam por si só.",
-            "Aumentando a competição entre os alunos.",
-            "Punindo severamente os culpados do bullying."
+            "Fatores como problemas familiares, exposição à violência e falta de suporte emocional.",
+            "Apenas influência dos colegas.",
+            "Somente problemas de disciplina na escola.",
+            "Apenas o desejo de se destacar entre os amigos."
         ],
         correct_answer: "a"
     },
+    {
+        question: "Como a escola pode ajudar a prevenir a violência entre os alunos?",
+        options: [
+            "Punindo severamente todos os alunos envolvidos.",
+            "Ignorando os casos para evitar conflitos maiores.",
+            "Criando campanhas de conscientização, promovendo diálogo e reforçando o respeito mútuo.",
+            "Separando os alunos agressivos do restante da turma sem oferecer apoio."
+        ],
+        correct_answer: "c"
+    },
+    {
+        question: "O que fazer ao presenciar um caso de violência na escola?",
+        options: [
+            "Filmar e postar nas redes sociais.",
+            "Ajudar o agressor para não se tornar vítima.",
+            "Informar um professor ou responsável para que medidas sejam tomadas.",
+            "Aplaudir a briga para incentivar a competição."
+        ],
+        correct_answer: "c"
+    },
+    {
+        question: "Qual dessas opções é um exemplo de violência verbal?",
+        options: [
+            "Fazer um elogio a um colega.",
+            "Xingar, gritar e humilhar um estudante na frente dos outros.",
+            "Empurrar um aluno no corredor.",
+            "Evitar conversar com um colega por não gostar dele."
+        ],
+        correct_answer: "b"
+    },
+    {
+        question: "Como os professores podem contribuir para a redução da violência escolar?",
+        options: [
+            "Aplicando punições severas a todos os alunos.",
+            "Ignorando os casos de agressão.",
+            "Criando um ambiente seguro e incentivando o diálogo e respeito entre os alunos.",
+            "Evitando qualquer tipo de intervenção nos conflitos escolares."
+        ],
+        correct_answer: "c"
+    },
+    {
+        question: "Qual é o impacto da violência escolar no desempenho dos alunos?",
+        options: [
+            "Apenas dificuldades em algumas matérias.",
+            "Melhora na capacidade de defesa pessoal.",
+            "Prejuízos na concentração, aprendizado e autoestima.",
+            "Nenhum impacto significativo, pois faz parte da rotina escolar."
+        ],
+        correct_answer: "c"
+    },
+    {
+        question: "Por que o cyberbullying também é considerado um tipo de violência escolar?",
+        options: [
+            "Porque acontece exclusivamente dentro da escola.",
+            "Porque pode afetar emocionalmente os alunos e impactar sua vida escolar.",
+            "Porque envolve apenas brincadeiras entre amigos.",
+            "Porque não tem impacto na vida das vítimas."
+        ],
+        correct_answer: "b"
+    },
+    {
+        question: "Como os pais podem ajudar a prevenir a violência escolar?",
+        options: [
+            "Conversando com os filhos, ensinando respeito e acompanhando sua vida escolar.",
+            "Ignorando os relatos dos filhos para evitar problemas.",
+            "Permitindo que os filhos resolvam tudo sozinhos.",
+            "Incentivando os filhos a se defenderem com violência."
+        ],
+        correct_answer: "a"
+    },
+    {
+        question: "Qual é o papel dos colegas na prevenção da violência escolar?",
+        options: [
+            "Apoiar e incentivar os agressores.",
+            "Ser indiferente e não se envolver.",
+            "Ajudar a vítima e denunciar casos de violência para os responsáveis.",
+            "Filmar e divulgar agressões para conscientizar os outros."
+        ],
+        correct_answer: "c"
+    },
+    {
+        question: "O que pode ser feito para ajudar um aluno vítima de violência escolar?",
+        options: [
+            "Ignorar a situação para não se envolver.",
+            "Conversar com a vítima, oferecer apoio e denunciar o caso para um adulto responsável.",
+            "Evitar falar com a vítima para não se tornar alvo.",
+            "Encobrir os agressores para evitar confusão."
+        ],
+        correct_answer: "b"
+    },
+    {
+        question: "O que pode ser considerado uma atitude violenta dentro da escola?",
+        options: [
+            "Brincadeiras inofensivas entre amigos.",
+            "Apoiar um colega em momentos difíceis.",
+            "Agressões físicas, insultos, ameaças e exclusão social.",
+            "Resolver desentendimentos através do diálogo."
+        ],
+        correct_answer: "c"
+    }
 ];
+
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
