@@ -6,23 +6,29 @@
     <title>Jogo de Alternativas</title>
     <style>
         body {
-            background-color: #f2f2f2; /* Fundo cinza */
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
         .container {
             max-width: 600px;
-            margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-        h1, p {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
+        }
+        h1 {
+            color: #333;
         }
         .question {
             margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
         }
         .options {
             list-style-type: none;
@@ -30,37 +36,51 @@
         }
         .options li {
             margin-bottom: 10px;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
-        .options input[type="radio"] {
+        .options li:hover {
+            background: #e3e3e3;
+        }
+        input[type="radio"] {
             margin-right: 10px;
         }
-        input[type="submit"] {
+        #submitBtn {
             display: block;
-            margin: 0 auto;
-            background-color: #4CAF50;
+            margin: 20px auto 0;
+            background: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
+        #submitBtn:hover {
+            background: #218838;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Quiz de Bullying Geral</h1>
-        <h1>Feito por: Ivan e italo. </h1>
-        <h1>Escola: C. E Admardo Alves Torres. </h1>
-        <h1>Professora: Louisi</h1>
+        <p><strong>Feito por:</strong> Ivan e Ítalo</p>
+        <p><strong>Escola:</strong> C. E Admardo Alves Torres</p>
+        <p><strong>Professora:</strong> Louisi</p>
        
         <div class="question" id="question">
             <!-- A pergunta e opções serão carregadas aqui -->
         </div>
         <input type="submit" id="submitBtn" value="Enviar Resposta">
-        <div id="result"></div> <!-- Este é o elemento para exibir o resultado -->
+        <div id="result"></div>
     </div>
 
     <script src="script2.js"></script> <!-- Vincula o arquivo JavaScript -->
